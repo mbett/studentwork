@@ -17,9 +17,9 @@ let myFlashcards = [ {
 
 // Make the database point to the location root -> deck -> flashcards
 // If the location doesn't exist is will be created
-firebase.database().ref('deck/flashcards'); 
+firebase.database(learning-tool-5eb63-default-rtdb).ref('deck/flashcards'); 
  
 // myFlashcards will be stored under flashcards in the database
 // Anything that was in this location will be overwritten
 // Thus, a write operation also does an update
-firebase.database().set(myFlashcards);
+firebase.database(learning-tool-5eb63-default-rtdb).set(myFlashcards);
