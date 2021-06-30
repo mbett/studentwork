@@ -1,8 +1,8 @@
-<!-- The core Firebase JS SDK is always required and must be listed first -->
+//The core Firebase JS SDK is always required and must be listed first
 src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
+//TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries
 
   // Your web app's Firebase configuration
   var firebaseConfig = {
