@@ -49,7 +49,7 @@ console.log('okay3');
 
 	let fc = firebase.database().ref('deck/flashy');
 	// A variable to store the JSON results in a human readable format
-	let jsonString;
+	let jsonString ="";
 	// Tell Firebase to retrieve your data
 console.log('okay4');
 	fc.on("value", function(retrieve) {
@@ -57,8 +57,8 @@ console.log('okay4');
 	    let queryData = retrieve.val();
 	    // Turn the data into a JSON String
 	    jsonString = JSON.stringify(queryData);
-console.log('okay5');
+console.log('okay5'+jsonString);
 	});
 console.log('okay6');
 	// Print the data out as a JSON string or otherwise manipulate it
-	console.log (' JSON string:' + jsonString )
+	console.log (' JSON string:' + jsonString );
