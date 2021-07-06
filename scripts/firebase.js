@@ -29,15 +29,20 @@ let myFlashcards = [ {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 
+console.log('okay1');
 
 // Make the database point to the location root -> deck -> flashcards
 // If the location doesn't exist is will be created
 firebase.database().ref('deck/flashcards'); 
- 
+
+console.log('okay2');
+
 // myFlashcards will be stored under flashcards in the database
 // Anything that was in this location will be overwritten
 // Thus, a write operation also does an update
 firebase.database().set(myFlashcards);
+
+console.log('okay3');
 
 // As before,make the database point to the location where the data exists
 // If the location doesn't exist it will be created but there will be nothing to retirieve
@@ -46,11 +51,14 @@ firebase.database().set(myFlashcards);
 	// A variable to store the JSON results in a human readable format
 	let jsonString;
 	// Tell Firebase to retrieve your data
+console.log('okay4');
 	fc.on("value", function(retrieve) {
 	    //Get the raw JSON data back from the database
 	    let queryData = retrieve.val();
 	    // Turn the data into a JSON String
 	    jsonString = JSON.stringify(queryData);
+console.log('okay5');
 	});
+console.log('okay6');
 	// Print the data out as a JSON string or otherwise manipulate it
 	console.log (' JSON string:' + jsonString )
