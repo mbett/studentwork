@@ -33,14 +33,14 @@ console.log('okay1');
 
 // Make the database point to the location root -> deck -> flashcards
 // If the location doesn't exist is will be created
-firebase.database().ref('deck/flashcards'); 
+refloc = firebase.database().ref('deck/flashcards'); 
 
 console.log('okay2');
 
 // myFlashcards will be stored under flashcards in the database
 // Anything that was in this location will be overwritten
 // Thus, a write operation also does an update
-firebase.database().set(myFlashcards);
+refloc.set(myFlashcards);
 
 console.log('okay3');
 
