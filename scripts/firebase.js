@@ -28,6 +28,7 @@ let myFlashcards = [ {
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
+firebase.analytics();
 
 console.log('okay1');
 
