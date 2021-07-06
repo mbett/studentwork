@@ -28,7 +28,6 @@ let myFlashcards = [ {
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-firebase.analytics();
 
 console.log('okay1');
 
@@ -41,7 +40,7 @@ console.log('okay2');
 // myFlashcards will be stored under flashcards in the database
 // Anything that was in this location will be overwritten
 // Thus, a write operation also does an update
-firebase.database().set(myFlashcards);
+firebase.database().ref('deck/flashcards').set(myFlashcards);
 
 console.log('okay3');
 
